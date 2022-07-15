@@ -18,7 +18,7 @@ return (
   <>
     {
       visible &&
-      <div className="${name.toLowerCase()}">
+      <div id="${name}">
          ${name} 
       </div>}
   </>
@@ -27,23 +27,21 @@ return (
 export default ${name};
 `,
 
-  manager: (name) => `// TODO: TDD
-import { shallow, render } from 'enzyme';
-import renderer from 'react-test-renderer';
-import React from 'react';
-import ${name} from '.';
-const component = <${name} />;
-describe('The ${name} component', () => {
-  it('renders correctly', () => {
-    const wrapper = render(component);
-    expect(wrapper.hasClass('${name.toLowerCase()}')).toBeTruthy();
-    const tree = renderer.create(component).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});`,
-  sass: (name) => `.${name.toLowerCase()}
-  color: initial
-  background: initial`,
+  manager: (name) => `import STOCKX from "./test";
+
+class Manager${name} {
+  constructor() {
+
+  }
+}
+
+export default Manager${name};
+
+`,
+  sass: (name) => `#${name}{
+  color: red;
+  background: red;
+}`,
 };
 
 const fileExists = (path) => (file) => fs.existsSync(`${path}/${file}`);

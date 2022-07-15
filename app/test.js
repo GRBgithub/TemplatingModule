@@ -1,5 +1,6 @@
 const STOCKX = {
 
+Test:{visible:false,setVisible:()=>{}},
 
   //END
 };

@@ -1,6 +1,6 @@
 const STOCKX = {
 
-Test:{visible:false,setVisible:()=>{}},
+Zack:{visible:false,setVisible:()=>{}},
 
   //END
 };

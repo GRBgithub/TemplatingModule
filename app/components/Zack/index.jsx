@@ -1,22 +1,22 @@
 
 import React from 'react';
 import STOCKX from '../../test';
-const Test = () => {
+const Zack = () => {
 
 const [visible,setvisible] = React.useState(false);
   React.useEffect(() => {
-    STOCKX.Test.setvisible = setvisible;
-    STOCKX.Test.visible = visible;
+    STOCKX.Zack.setvisible = setvisible;
+    STOCKX.Zack.visible = visible;
   }, [visible]);
 
 return (
   <>
     {
       visible &&
-      <div className="test">
-         Test 
+      <div id="Zack">
+         Zack 
       </div>}
   </>
   )
 };
-export default Test;
+export default Zack;

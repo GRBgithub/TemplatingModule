@@ -3,8 +3,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
-    "dev": "remix dev",
-    "dev2": "concurrently  \"remix dev\" \"node ./app/template.js\""
+    "dev": "concurrently  \"remix dev\" \"node ./app/template.js\""
   },
   "dependencies": {
     "@remix-run/node": "^1.6.3",
